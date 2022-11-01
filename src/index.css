@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.top-pane {
+  background-color: hsl(225 6% 25%);
+}
+
+.pane {
+  height: 50vh;
+  display: flex;
+
+}
+
+.editor-container {
+  flex-grow: 1; /*flexbox takes max space*/
+  flex-basis: 0; /*makes all flex items the same size*/
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: hsl(225 6% 25%);
+}
+
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+ position: absolute; 
+ overflow: hidden !important;
+}
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225 6% 13%);
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.expand-collapse-button {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-radius: 0 0 0.5rem 0.5rem;
+  overflow: hidden;
+}
